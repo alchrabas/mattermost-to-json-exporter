@@ -1,0 +1,10 @@
+A simple script to export all the conversations from Mattermost to JSON. Exports them directly from the database, so it requires db credentials and (in order to export the images) it must be run on the mattermost server.
+
+`conn = psycopg2.connect(database="mattermost", user="ENTER USER HERE", password="ENTER PASSWORD HERE", host="localhost")`
+
+Here you should enter your database credentials.
+
+`FILES_ROOT = "/opt/mattermost/data/"`
+
+And here the directory when the user data is stored.
+They are copied to the directory `images/` relative to scripts cwd.
